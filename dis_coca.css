@@ -25,6 +25,11 @@ img {
     max-width: 100%;
 }
 
+section {
+    scroll-margin-top: 90px;
+}
+
+
 /* ===== GRILLA ===== */
 .container {
     width: 1140px;
@@ -67,6 +72,12 @@ img {
     text-decoration: none;
     padding: 15px 20px;
     cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.boton:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .boton.boton-rojo {
@@ -83,7 +94,14 @@ img {
     font-size: 16px;
     font-weight: bold;
     border: 1px solid red;
+
 }
+
+boton.boton-blanco:hover {
+  background-color: red;
+    color: white
+}
+
 
 /* ===== HEADER ===== */
 header {
@@ -94,6 +112,7 @@ header {
     z-index: 2;
     width: 100%;
     background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 header .container {
@@ -110,6 +129,16 @@ header .container nav a {
     color: red;
     text-decoration: none;
     margin: 0 15px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+header .container nav a:hover {
+    color: rgb(39, 4, 4);
+    border-bottom: 2px solid red;
+    
 }
 
 /* ===== INICIO ===== */
@@ -120,6 +149,9 @@ header .container nav a {
 #inicio img {
     width: 100%;
     display: block;
+     height: 90vh;            /* alto casi de toda la pantalla */
+    object-fit: cover;       /* recorta sin deformar */
+    filter: brightness(50%); /* oscurece para que se lea el texto */
 }
 
 #inicio .bloque-inicio {
@@ -129,16 +161,24 @@ header .container nav a {
     width: 400px;
     margin-left: -200px;
     text-align: center;
+    top: 50%;
+    margin-left: 0;
+    width: 600px;
+    max-width: 90%;
+    transform: translate(-50%, -50%);
 }
 
 #inicio .bloque-inicio h1 {
     color: white;
-    font-size: 35px;
+    font-size: 50px;
+     font-weight: 900;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6)
 }
 
 #inicio .bloque-inicio p {
     color: white;
     font-size: 16px;
+      margin-bottom: 30px;
 }
 
 /* ===== NOSOTROS ===== */
@@ -149,19 +189,31 @@ header .container nav a {
 }
 
 #nosotros p {
-    color: white;
-    text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* ===== SERVICIOS ===== */
 #servicios .bloque-servicio {
     border: 1px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    height: 100%;
+}
+
+#servicios .bloque-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #servicios .bloque-servicio .bloque-img-servicio img {
     width: 100%;
     display: block;
+    height: 220px;
+    object-fit: cover;
 }
 
 #servicios .bloque-servicio .bloque-contenido-servicio {
@@ -171,6 +223,7 @@ header .container nav a {
 #servicios .bloque-servicio .bloque-contenido-servicio h3 {
     margin-top: 0;
     font-size: 25px;
+    color: red;
 }
 
 /* ===== GALERÍA ===== */
@@ -182,14 +235,80 @@ header .container nav a {
     margin-bottom: 30px;
 }
 
+#galeria .cuadrado-perfecto {
+    overflow: hidden;
+     border-radius: 12px;
+    position: relative;
+}
+
 #galeria .cuadrado-perfecto img {
-    width: 100%;
+    width: 150%;
     display: block;
+    margin: 0 auto;
+    transition: 0.4s;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+#galeria .cuadrado-perfecto img:hover {
+    transform: scale(1.1);
 }
 
 #galeria .cuadrado-perfecto h4 {
     text-align: center;
     color: red;
+     position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* ===== marcas ===== */
+
+#marcas {
+    background-color: #dfdddd;
+    padding: 15px 0;
+}
+
+#nosotros p {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* ===== MARCAS ===== */
+
+.columna-30{
+    width: 30%;
+}
+
+#marcas .row {
+    justify-content:space-around;
+}
+
+#marcas img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+       height: 150px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+#marcas img:hover {
+    transform: scale(1.1);
+}
+
+#marcas h1{
+    text-align: center;
+    color: rgb(236, 1, 1);
 }
 
 /* ===== CONTÁCTENOS ===== */
@@ -208,7 +327,21 @@ header .container nav a {
     padding: 10px;
     border: 1px solid grey;
     font-family: "Roboto", sans-serif;
+     border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
 }
+
+.form-control:focus {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+#contactenos iframe {
+    border-radius: 12px;
+}
+
 
 /* ===== FOOTER ===== */
 footer {
@@ -245,4 +378,16 @@ footer .barra-footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px;
+}
+
+footer h3 {
+    color: red;
+    border-bottom: 2px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+#galeria .cuadrado-perfecto img:hover {
+    transform: scale(1.1);
 }
