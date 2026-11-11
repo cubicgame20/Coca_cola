@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,28 +13,31 @@
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- diseño css -->
     <link rel="stylesheet" href="dis_coca.css">
-
-    <script src="https://kit.fontawesome.com/ff81df8fa9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--icono de redes -->
 </head>
 
 <body>
 
-    <!-- ===== ENCABEZADO ===== -->
+    <!-- logo coca encabezado-->
     <header>
         <div class="container">
             <a href="coca_cola.html">
                 <img src="coca_img/logo.png" alt="Logo Coca Cola" class="logo">
             </a>
+            <!--opciones -->
             <nav>
                 <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#galeria">Galería</a>
                 <a href="#contactenos">Contáctenos</a>
+
             </nav>
         </div>
     </header>
@@ -42,19 +46,21 @@
 
         <!-- ===== INICIO ===== -->
         <section id="inicio">
-            <img src="coca_img/bannerprincipal.jpg" alt="Banner principal">
+            <img src="coca_img/banner_principal.png" alt="Banner principal">
+
             <div class="bloque-inicio">
-                <h1>Bienvenidos a Coca Cola</h1>
+                <h1>Welcome to Coca Cola</h1>
                 <p>
                     Coca-Cola (conocida comúnmente como Coca en muchos países hispanohablantes;
                     en inglés también conocida como Coke) es una bebida azucarada gaseosa vendida
                     a nivel mundial en tiendas, restaurantes y máquinas expendedoras.
                 </p>
+
                 <a href="#nosotros" class="boton boton-rojo">Ver más</a>
             </div>
+
         </section>
 
-        <!-- ===== NOSOTROS ===== -->
         <section id="nosotros" class="seccion">
             <div class="container">
                 <p>
@@ -75,14 +81,14 @@
                     <div class="columna columna-33">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
-                                <img src="coca_img/servicio1.jpg" alt="Servicio 1">
+                                <img src="coca_img/ser1.png" alt="Servicio 1">
                             </div>
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 1</h3>
                                 <p>
-                                    Desde finales del siglo XIX hasta mediados del siglo XX
-                                    la multinacional ha logrado distribuirse por todos los
-                                    países exceptuando Corea del Norte y Cuba.
+                                    Además de su gaseosa clásica, la compañía ofrece versiones sin azúcar,
+                                    jugos, aguas, tés y bebidas deportivas, con opciones para cada gusto
+                                    y momento del día
                                 </p>
                                 <a href="#" class="boton boton-blanco">Ver más</a>
                             </div>
@@ -92,14 +98,14 @@
                     <div class="columna columna-33">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
-                                <img src="coca_img/servicio2.jpg" alt="Servicio 2">
+                                <img src="coca_img/ser2.png" alt="Servicio 2">
                             </div>
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 2</h3>
                                 <p>
-                                    Desde finales del siglo XIX hasta mediados del siglo XX
-                                    la multinacional ha logrado distribuirse por todos los
-                                    países exceptuando Corea del Norte y Cuba.
+                                    Gracias a una red de embotelladoras locales, sus productos llegan a
+                                    tiendas, restaurantes y máquinas expendedoras en más de 200 países,
+                                    generando empleo en cada región.
                                 </p>
                                 <a href="#" class="boton boton-blanco">Ver más</a>
                             </div>
@@ -109,14 +115,14 @@
                     <div class="columna columna-33">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
-                                <img src="coca_img/servicio3.jpg" alt="Servicio 3">
+                                <img src="coca_img/ser3.png" alt="Servicio 3">
                             </div>
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 3</h3>
                                 <p>
-                                    Desde finales del siglo XIX hasta mediados del siglo XX
-                                    la multinacional ha logrado distribuirse por todos los
-                                    países exceptuando Corea del Norte y Cuba.
+                                    La empresa trabaja en programas de reciclaje de envases, uso responsable
+                                    del agua y apoyo a comunidades, buscando reducir su impacto en el
+                                    medio ambiente.
                                 </p>
                                 <a href="#" class="boton boton-blanco">Ver más</a>
                             </div>
@@ -127,50 +133,66 @@
             </div>
         </section>
 
-        <!-- ===== GALERÍA ===== -->
+        <!-- ===== fotos ===== -->
         <section id="galeria">
             <div class="container-fluid">
-                <div class="row">
+
+                <div class="row"> <!-- fila de fotos -->
+
+                    <div class="columna columna-33"> <!--1/3 foto-->
+
+                        <div class="cuadrado-perfecto">
+
+                            <img src="coca_img/gal1.png" alt="Botella clásica">
+
+                            <h4>Botella clásica</h4>
+                        </div>
+
+                    </div>
 
                     <div class="columna columna-33">
+
                         <div class="cuadrado-perfecto">
-                            <img src="coca_img/servicio1.jpg" alt="Imagen 1">
-                            <h4>Imagen 1</h4>
+                    
+                            <img src="coca_img/gal2.png" alt="Lata bien fría">
+
+                            <h4>Lata bien fría</h4>
+                        </div>
+                    </div>
+
+                    <div class="columna columna-33">
+
+                        <div class="cuadrado-perfecto">
+
+                            <img src="coca_img/gal3.png" alt="Coca-Cola Zero">
+
+                            <h4>Coca-Cola Zero</h4>
+
+                        </div>
+                    </div>
+
+                    <div class="columna columna-33">
+
+                        <div class="cuadrado-perfecto">
+                            
+                            <img src="coca_img/gal4.png" alt="Para compartir">
+
+                            <h4>Para compartir</h4>
+
                         </div>
                     </div>
 
                     <div class="columna columna-33">
                         <div class="cuadrado-perfecto">
-                            <img src="coca_img/servicio2.jpg" alt="Imagen 2">
-                            <h4>Imagen 2</h4>
+                            <img src="coca_img/gal5.png" alt="Con comida">
+                            <h4>Con comida</h4>
                         </div>
                     </div>
 
                     <div class="columna columna-33">
                         <div class="cuadrado-perfecto">
-                            <img src="coca_img/servicio3.jpg" alt="Imagen 3">
-                            <h4>Imagen 3</h4>
-                        </div>
-                    </div>
-
-                    <div class="columna columna-33">
-                        <div class="cuadrado-perfecto">
-                            <img src="coca_img/servicio1.jpg" alt="Imagen 4">
-                            <h4>Imagen 4</h4>
-                        </div>
-                    </div>
-
-                    <div class="columna columna-33">
-                        <div class="cuadrado-perfecto">
-                            <img src="coca_img/servicio2.jpg" alt="Imagen 5">
-                            <h4>Imagen 5</h4>
-                        </div>
-                    </div>
-
-                    <div class="columna columna-33">
-                        <div class="cuadrado-perfecto">
-                            <img src="coca_img/servicio3.jpg" alt="Imagen 6">
-                            <h4>Imagen 6</h4>
+                            <img src="coca_img/gal6.png" alt="Navidad">
+                            <h4>Navidad</h4>
                         </div>
                     </div>
 
@@ -178,37 +200,55 @@
             </div>
         </section>
 
-        <!-- ===== CONTÁCTENOS ===== -->
+        <!-- ===== contacto ===== -->
         <section id="contactenos" class="seccion">
-            <div class="container">
-                <div class="row">
 
+            <div class="container">
+
+                <div class="row">
+                    
+                    <!-- formulario -->
+                     
                     <div class="columna columna-50">
-                        <form action="" method="post">
-                            <div class="form-block">
+
+                        <form action="" method="post"> <!-- action donde se envia los datos/ post datos sensibles-->
+
+                            <div class="form-block"> <!-- cajita de formulario -->
+
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
+                                <input type="text" id="nombre" name="nombre" class="form-control"
+                                    placeholder="Tu nombre" required>
                             </div>
+
                             <div class="form-block">
                                 <label for="email">Correo</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="tucorreo@ejemplo.com" required>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="tucorreo@ejemplo.com" required>
                             </div>
+
                             <div class="form-block">
                                 <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                                <textarea id="mensaje" name="mensaje" class="form-control" rows="6"
+                                    placeholder="Escribe tu mensaje"></textarea>
                             </div>
+
                             <div class="form-block">
                                 <input type="submit" value="Enviar" class="boton boton-rojo">
                             </div>
+
                         </form>
+
                     </div>
 
+                    <!-- mapa de google -->
                     <div class="columna columna-50">
+
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127506.39327133937!2d-75.3424297936542!3d2.937788653056666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b747c5a6b4009%3A0x69acf162bb25539a!2sNeiva%2C%20Huila!5e0!3m2!1ses!2sco!4v1649039417951!5m2!1ses!2sco"
                             width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
+
                     </div>
 
                 </div>
@@ -219,43 +259,53 @@
 
     <!-- ===== PIE DE PÁGINA ===== -->
     <footer>
+        
         <div class="container">
+
             <div class="row">
 
                 <div class="columna columna-25">
-                    <img src="coca_img/logo.png" alt="Logo Coca Cola" class="logo-footer">
+
+                    <img src="coca_img/logo2.png" alt="Logo Coca Cola" class="logo-footer">
+
                     <p>
                         La empresa multinacional estadounidense The Coca-Cola Company es la única
                         corporación en el mundo autorizada a importar, procesar y usar
                         comercialmente hojas de coca en la elaboración de su bebida.
                     </p>
+
                 </div>
 
                 <div class="columna columna-25">
+
                     <h3>Temas Relacionados</h3>
                     <ul>
-                        <li><a href="#">Tema 1</a></li>
-                        <li><a href="#">Tema 2</a></li>
-                        <li><a href="#">Tema 3</a></li>
+                        <li><a href="#inicio">Nuestra Empresa</a></li>
+                        <li><a href="#galeria">Servicios</a></li>
+                        <li><a href="#contactenos">Contacto</a></li>
                     </ul>
                 </div>
 
                 <div class="columna columna-25">
+
                     <h3>Datos de Contacto</h3>
                     <ul>
-                        <li>miller.galindo@usco.edu.co</li>
-                        <li>3164594795</li>
-                        <li>Avenida Pastrana Borrero con Cra 1a<br>Neiva, Huila</li>
+                        <li>privacy@coca-cola.com</li>
+                        <li>3222774400</li>
+                        <li> Cl. 25 A # 5B-96<br>Neiva, Huila</li>
                     </ul>
                 </div>
 
                 <div class="columna columna-25">
+
                     <h3>Redes Sociales</h3>
+
                     <ul>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.facebook.com/cocacolacolombia/?locale=es_LA"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/cocacolacol?exln=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://x.com/CocaColaCol"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
                     </ul>
+
                 </div>
 
             </div>
@@ -267,4 +317,5 @@
     </footer>
 
 </body>
+
 </html>
