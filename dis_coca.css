@@ -1,72 +1,83 @@
-*{
+/* ===== GENERALES ===== */
+* {
     box-sizing: border-box;
 }
 
-body
-{
-    font-family: "Roboto";
-    font-size: 13px;
-    
+html {
+    scroll-behavior: smooth;
 }
 
-a
-{
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+}
+
+a {
     display: inline-block;
 }
 
-p
-{
-    color:black;
+p {
+    color: black;
 }
 
-header
-{
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: white;
+img {
+    max-width: 100%;
+}
+
+/* ===== GRILLA ===== */
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container-fluid {
     width: 100%;
-   
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-header .container
-{
+.row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
-header .container .logo
-{
-    width: 100px;
+.columna {
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-header .container nav a
-{
-    Color: red;
-    text-decoration: none;
-    margin: 0 15px;
+.columna-25 { width: 25%; }
+.columna-33 { width: 33.33%; }
+.columna-50 { width: 50%; }
+
+.seccion {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-.boton
-{
+/* ===== BOTONES ===== */
+.boton {
     text-align: center;
     text-decoration: none;
     padding: 15px 20px;
+    cursor: pointer;
 }
 
-.boton.boton-rojo
-{
+.boton.boton-rojo {
     color: white;
     background-color: red;
     font-size: 20px;
     font-weight: bold;
+    border: none;
 }
 
-.boton.boton-blanco
-{
+.boton.boton-blanco {
     color: red;
     background-color: white;
     font-size: 16px;
@@ -74,117 +85,164 @@ header .container nav a
     border: 1px solid red;
 }
 
-.seccion
-{
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-}
-
-.cuadrado-perfecto /*pendiente este codigo para  la clase de los lunes*/
-{
+/* ===== HEADER ===== */
+header {
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
     width: 100%;
-    
+    background-color: white;
 }
 
-.container
-{
-    width: 1140px;
-    margin: 0 auto 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.row
-{
+header .container {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.columna /*quedamos hasta aca con la clase del lunes*/
-{
-    padding-right: 15px;
-    padding-left: 15px;
+header .container .logo {
+    width: 100px;
 }
 
-.columna-33
-{
-    width: 33.33%;
+header .container nav a {
+    color: red;
+    text-decoration: none;
+    margin: 0 15px;
 }
 
-#inicio
-{
+/* ===== INICIO ===== */
+#inicio {
     position: relative;
 }
 
-#inicio img /*quedamos hasta aca con la clase del miercoles*/
-{
+#inicio img {
     width: 100%;
     display: block;
 }
 
-#inicio .bloque-inicio
-{
+#inicio .bloque-inicio {
     position: absolute;
     top: 40%;
     left: 50%;
     width: 400px;
-    text-align: center;
     margin-left: -200px;
+    text-align: center;
 }
 
-#inicio .bloque-inicio h1
-{
+#inicio .bloque-inicio h1 {
     color: white;
     font-size: 35px;
 }
 
-#inicio .bloque-inicio p
-{
+#inicio .bloque-inicio p {
     color: white;
     font-size: 16px;
 }
 
-#nosotros
-{
-    background-image: url(img/latas.jpg);
+/* ===== NOSOTROS ===== */
+#nosotros {
+    background-image: url(coca_img/latas.jpg);
+    background-color: #b00000; /* por si no carga la imagen */
     background-size: cover;
-
 }
 
-#nosotros p
-{
+#nosotros p {
     color: white;
     text-align: center;
     font-size: 16px;
-    /*margin: 0;*/
 }
 
-#servicios .bloque-servicio
-{
+/* ===== SERVICIOS ===== */
+#servicios .bloque-servicio {
     border: 1px solid grey;
-
 }
 
-#servicios .bloque-servicio .bloque-img-servicio
-{
-
-}
-
-#servicios .bloque-servicio .bloque-img-servicio img 
-{
+#servicios .bloque-servicio .bloque-img-servicio img {
     width: 100%;
+    display: block;
 }
 
-#servicios .bloque-servicio .bloque-contenido-servicio
-{
+#servicios .bloque-servicio .bloque-contenido-servicio {
     padding: 15px;
 }
 
-#servicios .bloque-servicio .bloque-contenido-servicio h3
-{
-    margin-top: 0px;
+#servicios .bloque-servicio .bloque-contenido-servicio h3 {
+    margin-top: 0;
     font-size: 25px;
+}
+
+/* ===== GALERÍA ===== */
+.cuadrado-perfecto {
+    width: 100%;
+}
+
+#galeria .columna {
+    margin-bottom: 30px;
+}
+
+#galeria .cuadrado-perfecto img {
+    width: 100%;
+    display: block;
+}
+
+#galeria .cuadrado-perfecto h4 {
+    text-align: center;
+    color: red;
+}
+
+/* ===== CONTÁCTENOS ===== */
+.form-block {
+    margin-bottom: 15px;
+}
+
+.form-block label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    font-family: "Roboto", sans-serif;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #222;
+    color: white;
+    padding-top: 40px;
+}
+
+footer p,
+footer li,
+footer a {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer .logo-footer {
+    width: 80px;
+}
+
+footer .barra-footer {
+    background-color: red;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
 }
