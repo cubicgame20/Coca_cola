@@ -11,6 +11,7 @@ body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     font-size: 13px;
+    line-height: 1.6;
 }
 
 a {
@@ -57,9 +58,17 @@ section {
     padding-left: 15px;
 }
 
-.columna-25 { width: 25%; }
-.columna-33 { width: 33.33%; }
-.columna-50 { width: 50%; }
+.columna-25 {
+    width: 25%;
+}
+
+.columna-33 {
+    width: 33.33%;
+}
+
+.columna-50 {
+    width: 50%;
+}
 
 .seccion {
     padding-top: 60px;
@@ -75,6 +84,7 @@ section {
     border-radius: 25px;
     transition: 0.3s;
 }
+
 .boton:hover {
     transform: scale(1.05);
     opacity: 0.9;
@@ -82,23 +92,23 @@ section {
 
 .boton.boton-rojo {
     color: white;
-    background-color: red;
+    background-color: #f40009;
     font-size: 20px;
     font-weight: bold;
     border: none;
 }
 
 .boton.boton-blanco {
-    color: red;
+    color: #f40009;
     background-color: white;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid red;
+    border: 1px solid #f40009;
 
 }
 
 boton.boton-blanco:hover {
-  background-color: red;
+    background-color: #f40009;
     color: white
 }
 
@@ -126,8 +136,9 @@ header .container .logo {
 }
 
 header .container nav a {
-    color: red;
+    color: rgb(14, 14, 14);
     text-decoration: none;
+    font-size: 16px;
     margin: 0 15px;
     font-weight: 500;
     padding-bottom: 4px;
@@ -136,9 +147,9 @@ header .container nav a {
 }
 
 header .container nav a:hover {
-    color: rgb(39, 4, 4);
-    border-bottom: 2px solid red;
-    
+    color: rgb(250, 1, 1);
+    border-bottom: 2px solid rgb(255, 5, 5);
+
 }
 
 /* ===== INICIO ===== */
@@ -149,9 +160,12 @@ header .container nav a:hover {
 #inicio img {
     width: 100%;
     display: block;
-     height: 90vh;            /* alto casi de toda la pantalla */
-    object-fit: cover;       /* recorta sin deformar */
-    filter: brightness(50%); /* oscurece para que se lea el texto */
+    height: 90vh;
+    /* alto casi de toda la pantalla */
+    object-fit: cover;
+    /* recorta sin deformar */
+    filter: brightness(50%);
+    /* oscurece para que se lea el texto */
 }
 
 #inicio .bloque-inicio {
@@ -171,20 +185,21 @@ header .container nav a:hover {
 #inicio .bloque-inicio h1 {
     color: white;
     font-size: 50px;
-     font-weight: 900;
+    font-weight: 900;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6)
 }
 
 #inicio .bloque-inicio p {
     color: white;
     font-size: 16px;
-      margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /* ===== NOSOTROS ===== */
 #nosotros {
     background-image: url(coca_img/latas.jpg);
-    background-color: #b00000; /* por si no carga la imagen */
+    background-color: #b00000;
+    /* por si no carga la imagen */
     background-size: cover;
 }
 
@@ -223,7 +238,7 @@ header .container nav a:hover {
 #servicios .bloque-servicio .bloque-contenido-servicio h3 {
     margin-top: 0;
     font-size: 25px;
-    color: red;
+    color: #f40009;
 }
 
 /* ===== GALERÍA ===== */
@@ -231,48 +246,64 @@ header .container nav a:hover {
     width: 100%;
 }
 
+/* ===== GALERÍA ===== */
 #galeria .columna {
     margin-bottom: 30px;
 }
 
 #galeria .cuadrado-perfecto {
-    overflow: hidden;
-     border-radius: 12px;
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 #galeria .cuadrado-perfecto img {
-    width: 150%;
+    width: 100%;
     display: block;
-    margin: 0 auto;
-    transition: 0.4s;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    transition: 0.5s;
 }
 
-#galeria .cuadrado-perfecto img:hover {
+/* al pasar el mouse: zoom y se oscurece un poco */
+#galeria .cuadrado-perfecto:hover img {
     transform: scale(1.1);
+    filter: brightness(70%);
 }
 
-#galeria .cuadrado-perfecto h4 {
-    text-align: center;
-    color: red;
-     position: absolute;
+/* texto encima de la foto */
+#galeria .cuadrado-perfecto .info {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    margin: 0;
-    padding: 12px;
-    color: white;
-    font-size: 16px;
-    text-align: left;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 50px 20px 18px;
+    text-align: center;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
+
+#galeria .cuadrado-perfecto .info h4 {
+    margin: 0 0 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+#galeria .cuadrado-perfecto .info p {
+    margin: 0;
+    color: #ddd;
+    font-size: 14px;
+}
+
+
+
 
 /* ===== marcas ===== */
 
 #marcas {
-    background-color: #dfdddd;
+    background-color: #ffffff;
     padding: 15px 0;
 }
 
@@ -285,19 +316,19 @@ header .container nav a:hover {
 
 /* ===== MARCAS ===== */
 
-.columna-30{
+.columna-30 {
     width: 30%;
 }
 
 #marcas .row {
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 #marcas img {
     width: 150px;
     display: block;
     margin: 0 auto;
-       height: 150px;
+    height: 150px;
     object-fit: contain;
     transition: 0.3s;
 }
@@ -306,42 +337,67 @@ header .container nav a:hover {
     transform: scale(1.1);
 }
 
-#marcas h1{
+#marcas h1 {
     text-align: center;
     color: rgb(236, 1, 1);
 }
 
-/* ===== CONTÁCTENOS ===== */
-.form-block {
-    margin-bottom: 15px;
+#marcas h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #F40009;
+    margin: 12px auto 0;
 }
 
-.form-block label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+/* ===== CONTÁCTENOS ===== */
+/* ===== CONTÁCTENOS ===== */
+#contactenos {
+    background-color: #e41e2b;   /* rojo Coca-Cola */
+}
+
+#contactenos h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 40px;
+    font-family: "Roboto", sans-serif;
+}
+
+.form-block {
+    margin-bottom: 25px;
 }
 
 .form-control {
     width: 100%;
-    padding: 10px;
-    border: 1px solid grey;
+    padding: 10px 0;
     font-family: "Roboto", sans-serif;
-     border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: 0.3s;
+    font-size: 15px;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .form-control:focus {
     outline: none;
-    border-color: red;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+    border-bottom: 2px solid white;
 }
 
-#contactenos iframe {
-    border-radius: 12px;
+textarea.form-control {
+    resize: none;
 }
 
+#contactenos .boton-blanco {
+    border: none;
+    padding: 12px 40px;
+}
 
 /* ===== FOOTER ===== */
 footer {
@@ -358,6 +414,8 @@ footer a {
 
 footer a {
     text-decoration: none;
+
+    
 }
 
 footer ul {
@@ -374,15 +432,16 @@ footer .logo-footer {
 }
 
 footer .barra-footer {
-    background-color: red;
+    background-color: #e41e2b;
     text-align: center;
     padding: 15px;
     margin-top: 30px;
 }
 
 footer h3 {
-    color: red;
-    border-bottom: 2px solid red;
+    color: #e41e2b;
+    border-bottom: 2px solid #e41e2b;
+    margin-bottom: 15px;
     display: inline-block;
     padding-bottom: 5px;
 }
